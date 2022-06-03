@@ -36,7 +36,7 @@
 
     <div>
         <label>Password: </label>
-        <input type="password" id="password" required>
+        <input type="password" id="password" pattern="^(?=.*?[A-Z])(?=(.*[a-z]){1,})(?=(.*[\d]){1,})(?=(.*[\W]){1,})(?!.*\s).{6,}$" required>
     </div>
     <br>
 
@@ -45,11 +45,7 @@
         <label>Email: </label>
         <input type="email" id="email" pattern="^(.+)@(.+)$" required>
     </div>
-    <br>
-    <div>
-        <label>Password: </label>
-        <input type="text" id="phone" pattern="\d{10}" required>
-    </div>
+
     <br>
     <div>
         <label>Gender: </label>
@@ -80,11 +76,10 @@
     </div>
 
     <label>Address:</label>
-    <textarea id="address" cols="15" rows=""></textarea>
+    <textarea id="address" cols="15" rows="" required></textarea>
 
     <br>
 
     <input type="submit">
 </form>
 </body>
-
