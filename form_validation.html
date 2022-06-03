@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Student Registration Form</title>
+    <style>
+        label {
+            width: 80px;
+            display: inline-block;
+        }
+
+        body {
+            background-color: #E7E9EB;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        form {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+<h1>Student Registration Form</h1>
+<form action="#">
+    <div>
+        <label>Name: </label>
+        <input type="text" id="name" pattern="[a-z|A-Z ]{1,42}" required>
+    </div>
+    <br>
+
+    <div>
+        <label>Password: </label>
+        <input type="password" id="password" required>
+    </div>
+    <br>
+
+
+    <div>
+        <label>Email: </label>
+        <input type="email" id="email" pattern="^(.+)@(.+)$" required>
+    </div>
+    <br>
+    <div>
+        <label>Password: </label>
+        <input type="text" id="phone" pattern="\d{10}" required>
+    </div>
+    <br>
+    <div>
+        <label>Gender: </label>
+        <input type="radio" id="male" checked="checked">
+        <label>Male</label>
+        <input type="radio" id="female">
+        <label>Female</label>
+        <input type="radio" id="other">
+        <label>Other</label>
+    </div>
+    <br>
+    <div>
+        <label>DOB: </label>
+        <input type="date" id="dob" required>
+    </div>
+    <br>
+    <div>
+        <p>Language: </p>
+        <input type="checkbox" id="english">
+        <label>English</label>
+        <br>
+        <input type="checkbox" id="hindi">
+        <label>Hindi</label>
+        <br>
+        <input type="checkbox" id="telugu">
+        <label>Telugu</label>
+        <br>
+    </div>
+
+    <label>Address:</label>
+    <textarea id="address" cols="15" rows=""></textarea>
+
+    <br>
+
+    <input type="submit">
+</form>
+</body>
+
