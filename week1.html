@@ -1,0 +1,224 @@
+WEEK 1:
+AIM:
+Design the following static web pages required for an online book store web site.
+1) HOME PAGE:
+The static home page must contain three frames.
+Top frame : Logo and the college name and links to Home page, Login page, Registration
+page, Catalogue page and Cart page (the description of these pages will be given below).
+Left frame : At least four links for navigation, which will display the catalogue of respective
+links.For e.g.: When you click the link “IT” the catalogue for IT Books should be displayed
+in the Right frame.
+Right frame: The pages to the links in the left frame must be loaded here.
+Initially this page contains description of the web site.
+
+head.html
+
+<html>
+<head>
+<frameset rows="20%,80%">
+<frame src="topframe.html"name="f1">
+<frameset cols="20%,80%">
+<frame src="leftframe.html"name="f2">
+<frame src="rightframe.html"name="f3">
+</frameset>
+</frameset>
+</head>
+</html>
+
+
+
+Login.html
+
+<html>
+<head> <title> Login Page </title>
+</head>
+ <body bgcolor=#86B049>
+ <form name="login">
+<h3> <u> Login Page </u> </h3>
+login: <input type="text" name="uname" ><br>
+password: <input type="password" name="pwd" ><br>
+<input type="submit" value="Submit" >
+<input type="reset" value="reset">
+</center> </form>
+</body></html>
+
+
+Rightframe.html
+
+<html>
+<body bgcolor=#DFF5CE>
+<h1 align=center>
+Hello Friends </h1>
+<p align=center>
+<h1>About Sreenidhi Educational Group</h1>
+Sreenidhi Institute of Science and Technology–Hyderabad, sponsored by Sree Educational Group was established in the year 1997 by the Chairman, Dr. K.T. Mahhe, an extraordinary educationist, a pragmatic leader, and a dynamic entrepreneur with rich experience in Academics and Industry. 
+</p>
+</body></html>
+Topframe.html
+
+<html>
+<body bgcolor=#DEE2FC>
+<p>
+<img src="logo.jpg" align=left width=200 height=80>
+<h1 align=center><img src="programming.gif" alt="Computer man" style="width:48px;height:48px;">* * * SNIST LIBRARY * * *<img src="programming.gif" alt="Computer man" style="width:48px;height:48px;"></h1>
+</p>
+<br>
+<h2>&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="homepage.html" target="f3">
+HOME
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="login.html" target="f3">
+LOGIN
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="regis.html.html" target="f3">
+REGISTRATION
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="catalog.html" target="f3">
+CATALOGUE
+</a>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="cart.html" target="f3">
+CART
+</a>
+&nbsp;
+</h2>
+</p>
+</body>
+</html>
+
+Leftframe.html
+
+<html>
+<body bgcolor=#c8888A>
+<a href="cse.html" target="f3">
+<h3 align=center>CSE</h3>
+</a>
+<br>
+<br>
+<br>
+<a href="it.html" target="f3">
+<h3 align=center>
+IT</h3>
+</a>
+<br>
+<br>
+<br>
+<a href="ece.html" target="f3">
+<h3 align=center>
+ECE
+</h3>
+</a>
+<br>
+<br>
+<br>
+<a href="eee.html" target="f3">
+<h3 align=center>
+EEE
+</h3>
+</a>
+</body>
+</html>
+
+
+Homepage.html
+
+<html>
+    <body bgcolor=#F7AD19>
+        <center>
+            <p> Hello guys<br>Welcome to ebook store</p>
+        </center>
+    </body>
+</html>
+
+
+
+Catalog.html
+
+<html>
+    <body bgcolor=#BFD834>
+        <center>
+            <table border="1">
+                <tr>
+                    <th>book preview</th>
+                    <th>book details</th>
+                    <th>price</th>
+                    <th>payment</th>
+                </tr>
+                <td><img src="bib.jpg"height=100></img>
+                </td>
+                <td>
+                <pre>
+                    <font face="comic sans ms"size=4 color="green">
+                        book:XML bible
+                        author:winston
+                        publisher:wiesly
+                    </font>
+                </pre>
+                </td>
+                <td> &nbsp; $40 &nbsp; </td>
+                <td> &nbsp; &nbsp; 
+                    <a href="cart.html"target="blank">
+                    <img src="" height="100" </img> 
+                    </a> &nbsp; &nbsp;
+                </td>
+                </tr>
+                <tr>
+                <td><img src="g105.jpg"height=100>
+                </img>
+                </td>
+                <td>
+                    <pre>
+                        <font face="comic sans ms" size4 color="green">
+                            book:Girl in room no 105
+                            author:Chetan Bhagat
+                            publisher:BPB publications
+                        </font>
+                    </pre>
+                </td>
+                <td> &nbsp; $40 &nbsp; </td>
+                <td> &nbsp; &nbsp;<a href="cart.html"target="blank> </a>"
+                </td>
+                <img src=""height=100></img>
+                </a> &nbsp; &nbsp;
+                </td>
+                </tr>
+            </table>
+        </center>
+    </body>
+</html>   
+
+
+Cart.html
+
+
+<html>
+<body bgcolor=#00AEAD>
+<table cellspacing="50" cellpadding="20" border="1">
+<tr>
+ <td>Book name</td>
+ <td>price</td>
+ <td>quantity</td>
+ <td>amount</td>
+</tr>
+<tr>
+ <td>java2</td>
+ <td>$35.5</td>
+ <td>2</td>
+ <td>$70</td>
+</tr>
+<tr>
+ <td>XML bible</td>
+ <td>$40.5</td>
+ <td>1</td>
+ <td>$40.5</td>
+</tr> <tr>
+<td></td>
+<td></td>
+<td>Total amount </td>
+<td>130.5 </td>
+</tr>
+</body>
+</html>
